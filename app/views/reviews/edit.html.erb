@@ -4,7 +4,7 @@
 
       <%= simple_form_for([@play, @review]) do |f| %>
         <div id="rating-form">
-          <%= f.input :rating %>
+          <label> Rating </label>
         </div>
 
         <%= f.input :comment %>
@@ -13,3 +13,10 @@
       <% end %>
   </div>
 </div>
+
+<script>
+  $('#rating-form').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  });
+</script>
